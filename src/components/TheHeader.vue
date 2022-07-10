@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
 import TheNav from '@/components/TheNav.vue';
 import TheLogo from '@/components/TheLogo.vue';
 </script>
@@ -7,32 +6,40 @@ import TheLogo from '@/components/TheLogo.vue';
 <template>
   <header>
     <TheLogo />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <TheNav />
-    </div>
+    <TheNav />
   </header>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<style scoped lang="scss">
+$header-bg: #fff;
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 6.25em; // 100/16
+  background-color: $header-bg;
+
+  .logo {
+    position: absolute;
+    left: 1em;
   }
 
-  header .wrapper {
+  nav {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 87.5em; // 1400/16
+    margin: 0 auto;
+    padding-right: 1em;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 </style>

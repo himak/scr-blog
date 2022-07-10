@@ -11,40 +11,29 @@ import { RouterLink } from 'vue-router';
   </nav>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+$nav-link: #000;
+$nav-link-hover: #FF002C;
+
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+  a {
+    font-size: 0.625em; // 10/16
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $nav-link;
+    padding: 0.9375em; // 15/16
+    transition: .4s;
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+    &:hover,
+    &:focus {
+      transition: .4s;
+      color: $nav-link-hover;
+    }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    &.router-link-exact-active {
+      color: $nav-link-hover;
+    }
   }
 }
 </style>
