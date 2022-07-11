@@ -12,7 +12,7 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped lang="scss">
-$nav-link: #000;
+$nav-link: #020500;
 $nav-link-hover: #ff002c;
 
 nav {

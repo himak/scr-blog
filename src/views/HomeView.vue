@@ -1,11 +1,11 @@
 <template>
   <TheHero />
-  <main>
-    <TheWelcome />
+  <main class="container">
+    <BlogList />
   </main>
 </template>
 
 <script setup lang="ts">
 import TheHero from '@/components/TheHero.vue';
-import TheWelcome from '@/components/TheWelcome.vue';
+import BlogList from '@/components/BlogList.vue';
 </script>
