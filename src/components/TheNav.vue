@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router';
 
 <style scoped lang="scss">
 $nav-link: #000;
-$nav-link-hover: #FF002C;
+$nav-link-hover: #ff002c;
 
 nav {
   a {
@@ -23,11 +23,11 @@ nav {
     text-decoration: none;
     color: $nav-link;
     padding: 0.9375em; // 15/16
-    transition: .4s;
+    transition: 0.4s;
 
     &:hover,
     &:focus {
-      transition: .4s;
+      transition: 0.4s;
       color: $nav-link-hover;
     }
 
